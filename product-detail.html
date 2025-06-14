@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm | Giường Đẹp</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#f59e0b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                </div>
+                <!-- Main Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="Website-Bán-Giường-Online.html" class="text-gray-800 font-medium hover:text-primary transition">Trang chủ</a>
+                    <a href="product-detail.html" class="text-gray-800 font-medium hover:text-primary transition">Sản phẩm</a>
+                    <a href="about.html" class="text-gray-800 font-medium hover:text-primary transition">Về chúng tôi</a>
+                    <a href="#" class="text-gray-800 font-medium hover:text-primary transition">Liên hệ</a>
+                </nav>
+                <!-- Search, Cart, Account -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm..." class="pl-10 pr-4 py-2 w-64 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+                    <div class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary cursor-pointer">
+                        <i class="ri-shopping-cart-2-line ri-lg"></i>
+                        <span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary cursor-pointer">
+                        <i class="ri-user-line ri-lg"></i>
+                    </div>
+                    <div class="hidden md:flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center text-primary mr-1">
+                            <i class="ri-phone-line ri-lg"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500">Hỗ trợ 24/7</div>
+                            <div class="text-sm font-medium">0123 456 789</div>
+                        </div>
+                    </div>
+                    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="Website-Bán-Giường-Online.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100">Trang chủ</a>
+                    <a href="product-detail.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100">Sản phẩm</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100">Về chúng tôi</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100">Liên hệ</a>
+                </div>
+                <div class="px-2 pt-2 pb-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm..." class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-10">
+                <!-- Product Images -->
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-sm mb-4">
+                        <img src="images/giuongbacau.png" alt="Giường gỗ sồi Bắc Âu" class="w-full h-96 object-cover object-top" id="main-image">
+                    </div>
+                    <div class="flex space-x-3">
+                        <img src="https://readdy.ai/api/search-image?query=modern%2520wooden%2520bed%2520frame%2520with%2520headboard%2C%2520oak%2520finish%2C%2520elegant%2520design%2C%2520minimalist%2520style%2C%2520clean%2520lines%2C%2520high-quality%2520craftsmanship%2C%2520bedroom%2520furniture%2C%2520comfortable%2520sleeping%2520solution%2C%2520contemporary%2520home%2520decor%2C%2520on%2520plain%2520white%2520background&width=120&height=90&seq=bed1a&orientation=landscape" class="w-20 h-16 object-cover rounded-lg border-2 border-primary cursor-pointer thumbnail" data-src="images/giuongbacau.png">
+                        <img src="https://readdy.ai/api/search-image?query=modern%2520wooden%2520bed%2520frame%2520with%2520headboard%2C%2520oak%2520finish%2C%2520elegant%2520design%2C%2520minimalist%2520style%2C%2520clean%2520lines%2C%2520high-quality%2520craftsmanship%2C%2520bedroom%2520furniture%2C%2520comfortable%2520sleeping%2520solution%2C%2520contemporary%2520home%2520decor%2C%2520on%2520plain%2520white%2520background&width=120&height=90&seq=bed1b&orientation=landscape" class="w-20 h-16 object-cover rounded-lg border-2 border-transparent hover:border-primary cursor-pointer thumbnail" data-src="https://readdy.ai/api/search-image?query=modern%2520wooden%2520bed%2520frame%2520with%2520headboard%2C%2520oak%2520finish%2C%2520elegant%2520design Nor%2520minimalist%2520style%2C%2520clean%2520lines%2C%2520high-quality%2520craftsmanship%2C%2520bedroom%2520furniture%2C%2520comfortable% observance2520sleeping%2520solution%2C%2520contemporary%2520home%2520decor%2C%2520on%2520plain%2520white%2520background&width=120&height=90&seq=bed1b&orientation=landscape">
+                        <img src="https://readdy.ai/api/search-image?query=modern%2520wooden%2520bed%2520frame%2520with%2520headboard%2C%2520oak%2520finish%2C%2520elegant%2520design%2C%2520minimalist%2520style%2C%2520clean%2520lines%2C%2520high-quality%2520craftsmanship%2C%2520bedroom%2520furniture%2C%2520comfortable%2520sleeping%2520solution%2C%2520contemporary%2520home%2520decor%2C%2520on%2520plain%2520white%2520background&width=120&height=90&seq=bed1c&orientation=landscape" class="w-20 h-16 object-cover rounded-lg border-2 border-transparent hover:border-primary cursor-pointer thumbnail" data-src="https://readdy.ai/api/search-image?query=modern%2520wooden%2520bed%2520frame%2520with%2520headboard%2C%2520oak%2520finish%2C%2520elegant%2520design%2C%2520minimalist%2520style%2C%2520clean%2520lines%2C%2520high-quality%2520craftsmanship%2C%2520bedroom%2520furniture%2C%2520comfortable%2520sleeping%2520solution%2C%2520contemporary%2520home%2520decor%2C%2520on%2520plain%2520white%2520background&width=120&height=90&seq=bed1c&orientation=landscape">
+                    </div>
+                </div>
+                <!-- Product Info -->
+                <div class="md:w-1/2">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-3">Giường gỗ sồi Bắc Âu</h1>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">(28 đánh giá)</span>
+                        <span class="ml-4 px-2 py-1 bg-primary text-white text-xs rounded">Mới</span>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-2xl font-bold text-primary mr-4">8.990.000₫</span>
+                        <span class="text-lg text-gray-500 line-through">10.500.000₫</span>
+                        <span class="ml-4 px-2 py-1 bg-orange-500 text-white text-xs rounded">-15%</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Giường gỗ sồi Bắc Âu với thiết kế hiện đại, tối giản, chất liệu gỗ tự nhiên cao cấp, bền đẹp theo thời gian. Phù hợp với nhiều không gian phòng ngủ, mang lại cảm giác ấm cúng và sang trọng.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-800 mb-2">Kích thước</h4>
+                        <div class="flex space-x-3">
+                            <button class="px-4 py-2 rounded border border-primary text-primary font-medium bg-white hover:bg-primary hover:text-white transition">1m6 x 2m</button>
+                            <button class="px-4 py-2 rounded border border-gray-300 text-gray-700 font-medium bg-white hover:bg-primary hover:text-white transition">1m8 x 2m</button>
+                            <button class="px-4 py-2 rounded border border-gray-300 text-gray-700 font-medium bg-white hover:bg-primary hover:text-white transition">2m x 2m2</button>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-800 mb-2">Chất liệu</h4>
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-primary rounded-full text-sm font-medium mr-2 mb-2">Gỗ sồi tự nhiên</span>
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-primary rounded-full text-sm font-medium mr-2 mb-2">Sơn phủ PU cao cấp</span>
+                    </div>
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="flex items-center">
+                            <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100" id="decrease-quantity">-</button>
+                            <input type="number" value="1" min="1" class="w-12 text-center border-none bg-transparent text-lg font-medium mx-2" id="quantity-input">
+                            <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100" id="increase-quantity">+</button>
+                        </div>
+                        <button class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-blue-600 transition shadow-md whitespace-nowrap flex items-center">
+                            <i class="ri-shopping-cart-2-line mr-2"></i> Thêm vào giỏ hàng
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-primary hover:text-white transition">
+                            <i class="ri-heart-line text-2xl"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-6 text-gray-600 text-sm">
+                        <div class="flex items-center"><i class="ri-truck-line mr-2 text-primary"></i> Giao hàng miễn phí</div>
+                        <div class="flex items-center"><i class="ri-shield-check-line mr-2 text-primary"></i> Bảo hành 5 năm</div>
+                        <div class="flex items-center"><i class="ri-exchange-line mr-2 text-primary"></i> Đổi trả 30 ngày</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Description Tabs -->
+            <div class="mt-12">
+                <div class="border-b border-gray-200">
+                    <nav class="flex space-x-8" aria-label="Tabs">
+                        <button class="tab-button text-gray-500 hover:text-primary py-4 px-1 border-b-2 border-transparent font-medium text-sm active" data-tab="description">Mô tả sản phẩm</button>
+                        <button class="tab-button text-gray-500 hover:text-primary py-4 px-1 border-b-2 border-transparent font-medium text-sm" data-tab="specifications">Thông số kỹ thuật</button>
+                        <button class="tab-button text-gray-500 hover:text-primary py-4 px-1 border-b-2 border-transparent font-medium text-sm" data-tab="reviews">Đánh giá</button>
+                    </nav>
+                </div>
+                <div class="mt-6">
+                    <div id="description" class="tab-content">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Mô tả sản phẩm</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Giường gỗ sồi Bắc Âu được chế tác từ gỗ sồi tự nhiên 100%, mang lại độ bền và vẻ đẹp vượt thời gian. Thiết kế tối giản với các đường nét tinh tế, phù hợp với phong cách nội thất hiện đại và truyền thống. Lớp sơn phủ PU cao cấp giúp bảo vệ bề mặt gỗ, chống trầy xước và tăng độ bóng. Sản phẩm không chỉ mang lại giấc ngủ thoải mái mà còn là điểm nhấn sang trọng cho phòng ngủ của bạn.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mt-4">
+                            <li>Thiết kế tối giản, hiện đại</li>
+                            <li>Chất liệu gỗ sồi tự nhiên cao cấp</li>
+                            <li>Sơn phủ PU chống trầy, bền màu</li>
+                            <li>Khung giường chắc chắn, chịu lực tốt</li>
+                        </ul>
+                    </div>
+                    <div id="specifications" class="tab-content hidden">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Thông số kỹ thuật</h3>
+                        <table class="w-full text-left text-gray-700">
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2 font-medium">Chất liệu</td>
+                                    <td class="py-2">Gỗ sồi tự nhiên, sơn PU cao cấp</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2 font-medium">Kích thước</td>
+                                    <td class="py-2">1m6 x 2m, 1m8 x 2m, 2m x 2m2</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2 font-medium">Trọng lượng</td>
+                                    <td class="py-2">50-70kg (tùy kích thước)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2 font-medium">Màu sắc</td>
+                                    <td class="py-2">Màu gỗ tự nhiên</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">Bảo hành</td>
+                                    <td class="py-2">5 năm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="reviews" class="tab-content hidden">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Đánh giá khách hàng</h3>
+                        <div class="space-y-6">
+                            <div class="border-b pb-4">
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <span class="ml-2 text-sm text-gray-500">Nguyễn Văn A - 10/06/2025</span>
+                                </div>
+                                <p class="text-gray-700">Giường rất đẹp, chất lượng gỗ tốt, lắp ráp dễ dàng. Rất hài lòng với sản phẩm!</p>
+                            </div>
+                            <div class="border-b pb-4">
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                    <span class="ml-2 text-sm text-gray-500">Trần Thị B - 05/06/2025</span>
+                                </div>
+                                <p class="text-gray-700">Thiết kế sang trọng, nhưng giao hàng hơi chậm. Nhìn chung vẫn đáng giá.</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">Viết đánh giá</h4>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Đánh giá của bạn</label>
+                                    <div class="flex text-gray-300">
+                                        <i class="ri-star-line hover:text-yellow-400 cursor-pointer"></i>
+                                        <i class="ri-star-line hover:text-yellow-400 cursor-pointer"></i>
+                                        <i class="ri-star-line hover:text-yellow-400 cursor-pointer"></i>
+                                        <i class="ri-star-line hover:text-yellow-400 cursor-pointer"></i>
+                                        <i class="ri-star-line hover:text-yellow-400 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nhận xét</label>
+                                    <textarea class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" rows="4" placeholder="Chia sẻ cảm nhận của bạn..."></textarea>
+                                </div>
+                                <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-blue-600 transition">Gửi đánh giá</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products Section -->
+            <section class="py-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Sản phẩm liên quan</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="images/giuong-ngu-go-oc-cho.png" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-medium text-gray-900">Giường gỗ óc chó hiện đại</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="text-lg font-bold text-primary">9.500.000₫</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">11.000.000₫</span>
+                            </div>
+                            <button class="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-blue-600 transition">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="images/giuong-ngu-go-cong-nghiep-kieu-nhat-thong-minh-cao-cap-4.jpg" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-medium text-gray-900">Giường gỗ thông tối giản</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="text-lg font-bold text-primary">7.200.000₫</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">8.500.000₫</span>
+                            </div>
+                            <button class="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-blue-600 transition">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="images/images.jfif" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-medium text-gray-900">Giường gỗ sồi cao cấp</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="text-lg font-bold text-primary">12.990.000₫</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">15.000.000₫</span>
+                            </div>
+                            <button class="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-blue-600 transition">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="images/Giuong-go-da-nang-thong-minh-GG-14-1.jpg" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-medium text-gray-900">Giường gỗ đa năng</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="text-lg font-bold text-primary">10.800.000₫</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">12.500.000₫</span>
+                            </div>
+                            <button class="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-blue-600 transition">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+     <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+
+    <!-- Chat Support Button -->
+    <button id="chatButton" class="fixed bottom-6 left-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center">
+        <i class="ri-customer-service-2-line ri-lg"></i>
+    </button>
+
+    <!-- Chat Box -->
+    <div id="chatBox" class="fixed bottom-24 left-6 w-80 bg-white rounded-lg shadow-xl overflow-hidden opacity-0 invisible transition-all duration-300 transform translate-y-4">
+        <div class="bg-primary text-white p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full text-primary mr-3">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <div>
+                    <h3 class="font-medium">Hỗ trợ trực tuyến</h3>
+                    <p class="text-xs opacity-80">Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+                </div>
+            </div>
+            <button id="closeChatBox" class="text-white hover:text-gray-200">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <div class="p-4 h-80 overflow-y-auto bg-gray-50" id="chatMessages">
+            <div class="flex mb-4">
+                <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-2 flex-shrink-0">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm max-w-[80%]">
+                    <p class="text-gray-700 text-sm">Xin chào! Tôi có thể giúp gì cho bạn về các sản phẩm giường ngủ?</p>
+                    <span class="text-xs text-gray-500 mt-1 block">10:30</span>
+                </div>
+            </div>
+        </div>
+        <div class="p-3 border-t">
+            <div class="flex">
+                <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." class="flex-1 px-3 py-2 rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-primary bg-gray-50 text-sm">
+                <button id="sendMessage" class="bg-primary text-white px-4 py-2 rounded-r-button hover:bg-blue-600 transition whitespace-nowrap">
+                    <i class="ri-send-plane-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="Website-Bán-Giường-Online.html" class="text-2xl font-['Pacifico'] text-primary mb-4 inline-block">logo</a>
+                    <p class="text-gray-400 mb-4">
+                        Chuyên cung cấp các sản phẩm giường ngủ và nội thất phòng ngủ chất lượng cao với giá cả hợp lý.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><i class="ri-facebook-fill text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><i class="ri-instagram-line text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><i class="ri-youtube-fill text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><i class="ri-twitter-fill text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Về chúng tôi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Chính sách vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tài khoản</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Tài khoản của tôi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Lịch sử đơn hàng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Danh sách yêu thích</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Thông báo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Trung tâm hỗ trợ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line text-primary mr-2"></i>
+                            <span>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line text-primary mr-2"></i>
+                            <span>0123 456 789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line text-primary mr-2"></i>
+                            <span>contact@giuongdep.vn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-time-line text-primary mr-2"></i>
+                            <span>Thứ 2 - Chủ nhật: 8:00 - 21:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Giường Đẹp. Tất cả quyền được bảo lưu.</p>
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-400 text-sm">Thanh toán qua:</span>
+                    <div class="flex space-x-3">
+                        <i class="ri-visa-fill ri-lg"></i>
+                        <i class="ri-mastercard-fill ri-lg"></i>
+                        <i class="ri-paypal-fill ri-lg"></i>
+                        <i class="ri-bank-card-fill ri-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Image Gallery
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-image');
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                thumbnails.forEach(t => t.classList.replace('border-primary', 'border-transparent'));
+                thumbnail.classList.replace('border-transparent', 'border-primary');
+                mainImage.src = thumbnail.getAttribute('data-src');
+                mainImage.alt = thumbnail.alt;
+            });
+        });
+
+        // Quantity Input
+        const quantityInput = document.getElementById('quantity-input');
+        document.getElementById('increase-quantity').addEventListener('click', () => {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        });
+        document.getElementById('decrease-quantity').addEventListener('click', () => {
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        });
+
+        // Tab Switching
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.remove('border-primary');
+                    btn.classList.add('border-transparent');
+                });
+                button.classList.add('active');
+                button.classList.add('border-primary');
+                button.classList.remove('border-transparent');
+
+                tabContents.forEach(content => content.classList.add('hidden'));
+                document.getElementById(button.getAttribute('data-tab')).classList.remove('hidden');
+            });
+        });
+    </script>
+     <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="priceRangeScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const priceRange = document.getElementById('priceRange');
+            const priceValue = document.getElementById('priceValue');
+            
+            function formatPrice(price) {
+                return new Intl.NumberFormat('vi-VN').format(price) + '₫';
+            }
+            
+            priceRange.addEventListener('input', function() {
+                priceValue.textContent = formatPrice(this.value);
+            });
+        });
+    </script>
+
+    <script id="backToTopScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script id="chatBoxScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatBox = document.getElementById('chatBox');
+            const closeChatBox = document.getElementById('closeChatBox');
+            const chatInput = document.getElementById('chatInput');
+            const sendMessage = document.getElementById('sendMessage');
+            const chatMessages = document.getElementById('chatMessages');
+            
+            chatButton.addEventListener('click', function() {
+                chatBox.classList.toggle('opacity-0');
+                chatBox.classList.toggle('invisible');
+                chatBox.classList.toggle('translate-y-4');
+            });
+            
+            closeChatBox.addEventListener('click', function() {
+                chatBox.classList.add('opacity-0', 'invisible', 'translate-y-4');
+            });
+            
+            function sendChatMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    const now = new Date();
+                    const time = now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+                    
+                    const userMessage = document.createElement('div');
+                    userMessage.className = 'flex mb-4 justify-end';
+                    userMessage.innerHTML = `
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-lg shadow-sm max-w-[80%]">
+                            <p class="text-gray-700 text-sm">${message}</p>
+                            <span class="text-xs text-gray-500 mt-1 block">${time}</span>
+                        </div>
+                    `;
+                    chatMessages.appendChild(userMessage);
+                    chatInput.value = '';
+                    
+                    // Auto-scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    
+                    // Simulate response after 1 second
+                    setTimeout(function() {
+                        const botMessage = document.createElement('div');
+                        botMessage.className = 'flex mb-4';
+                        botMessage.innerHTML = `
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-2 flex-shrink-0">
+                                <i class="ri-customer-service-2-line"></i>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm max-w-[80%]">
+                                <p class="text-gray-700 text-sm">Cảm ơn bạn đã liên hệ. Nhân viên tư vấn sẽ phản hồi trong vòng 5 phút.</p>
+                                <span class="text-xs text-gray-500 mt-1 block">${time}</span>
+                            </div>
+                        `;
+                        chatMessages.appendChild(botMessage);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+                }
+            }
+            
+            sendMessage.addEventListener('click', sendChatMessage);
+            
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendChatMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
