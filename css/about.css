@@ -1,0 +1,10 @@
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=modern%2520furniture%2520showroom%2520interior%2520with%2520elegant%2520bedroom%2520displays%2C%2520warm%2520lighting%2C%2520professional%2520retail%2520space%2C%2520high-end%2520furniture%2520store%2C%2520luxurious%2520atmosphere%2C%2520clean%2520and%2520organized%2520layout%2C%2520natural%2520materials%2C%2520gradient%2520from%2520white%2520to%2520transparent%2520on%2520left%2520side&width=1200&height=600&seq=about1&orientation=landscape');
+background-size: cover;
+background-position: center right;
+}
